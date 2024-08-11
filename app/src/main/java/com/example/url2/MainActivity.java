@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
                 if (!urlText.isEmpty()) {
                     Uri webpage = Uri.parse(urlText);
                     Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
-                    if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
+                    if (intent.resolveActivity(MainActivity.this.getPackageManager()) != null) {
                         startActivity(intent);
                     } else {
                         Toast.makeText(MainActivity.this, "No application available to handle this URL", Toast.LENGTH_SHORT).show();
@@ -51,11 +51,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
-
     private Context getActivity() {
         return null;
     }
-
-
-
 }

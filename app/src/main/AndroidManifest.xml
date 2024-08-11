@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.your.package.name">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.url2">
 
-    <!-- Required permissions -->
     <uses-permission android:name="android.permission.INTERNET" />
-
 
     <application
         android:allowBackup="true"
@@ -15,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.URL2"
-        android:targetSdkVersion="19">
+        android:targetSdkVersion="33"
+        tools:ignore="OldTargetApi">
 
         <activity
             android:name="com.example.url2.MainActivity"
@@ -25,7 +25,5 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
-
 </manifest>
